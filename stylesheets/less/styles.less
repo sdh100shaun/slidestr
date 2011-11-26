@@ -1,16 +1,73 @@
-@textColor:#333;
-@navHeight:2em;
-@textIndent:-9999px;
-@100percent:100%;
+/* Slidster less file
+   Author: Shaun Hare : @sdh100shaun
+   License: http://shaun.mit-license.org/
+   Version : 1.0 
+*/
+/* --------------------Configurable settings for reuse -------------------- */ 
+
+@company_logo:url('images/bg-white-trans-uonlogo.png') no-repeat 89% 10%;
+@slide_color:-webkit-gradient(
+    linear,
+    left bottom,
+	left top,
+    color-stop(0.8, rgb(3, 21, 43))
+);
+@base_font_size:100%;
+@textColor:#fff;
+@slide_heading_font:'Rokkitt', serif; //put any webfonts in util.css
+@slide_body_font: Georgia, Serif;
+@pColor:@textColor;
+
+
+
+/* -------------------End of configuarble settings -------------- */
+
 html{
 	color:@textColor;
-	background-image: -webkit-gradient(
-	    linear,
-	    left bottom,
-		left top,
-	    color-stop(0.8, rgb(3, 21, 43))
-	);
+	background-image: @slide_color;
 }
+/* Main body styles */
+body{
+	height:100%;
+	background:@company_logo;
+	min-height:45em;
+	font-family:@slide_body_font;
+	color:@textColor;
+}
+section{margin:4.5em auto; width:75%;}
+p{color:@pColor;font-size:@base_font_size * 1.35;}
+
+/* Heading styles */ 
+
+h1,h2,h3,h4{font-family:@slide_heading_font;color:@textColor;}
+h1{font-size:@base_font_size*3;}
+h2{font-size:@base_font_size*2.5;}
+h3{font-size:@base_font_size*2;}
+h4{font-size:@base_font_size*1.5;}
+
+
+/* List Styles */ 
+#slides {
+	section {
+		ul{ padding:1em;
+		margin-top:2em;
+		font-size:@base_font_size * 1.5;
+		list-style-type: disc;
+		li{
+			padding:0.5em;
+			display:block;
+			
+			}
+		}
+	
+	}
+}
+
+
+/* Header Navigation styles */
+
+/** Reused css styles **/
+@textIndent:-9999px;
 
 header{
   color: #000; 
@@ -24,13 +81,14 @@ header{
   overflow:hidden; 
   z-index: 10000; 
   position: relative; 
+  height:2em;
 	nav {
 		display:block;
 		color:@textColor;
 			ul{
 				float:right;
 				li{ float:left; 
-				line-height:@navHeight; 
+				line-height:2em; 
 				display: block; 
 				cursor: pointer; 
 				margin-top:4px;

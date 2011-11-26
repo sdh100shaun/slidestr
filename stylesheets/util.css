@@ -1,0 +1,17 @@
+/* Meyer Reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline}:focus{outline:0}body{line-height:1;color:black;background:white}ol,ul{list-style:none}table{border-collapse:separate;border-spacing:0}caption,th,td{text-align:left;font-weight:normal}blockquote:before,blockquote:after,q:before,q:after{content:""}blockquote,q{quotes:""""}
+/* HTML5 elements */ 
+section{display:block;}
+/* Web fonts */ 
+@font-face {
+  font-family: 'Rokkitt';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Rokkitt Bold'), local('Rokkitt-Bold'), url('http://themes.googleusercontent.com/static/fonts/rokkitt/v4/Mef17w3J4CtS0lw4Wa_8r73hpw3pgy2gAi-Ip7WPMi0.woff') format('woff');
+}
+@font-face {
+  font-family: 'Rokkitt';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Rokkitt'), url('http://themes.googleusercontent.com/static/fonts/rokkitt/v4/RcB7dRNAX_8JE8zinU47YALUuEpTyoUstqEm5AMlJo4.woff') format('woff');
+}
