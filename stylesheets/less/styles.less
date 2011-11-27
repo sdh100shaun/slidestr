@@ -5,7 +5,7 @@
 */
 /* --------------------Configurable settings for reuse -------------------- */ 
 
-@company_logo:url('images/bg-white-trans-uonlogo.png') no-repeat 89% 10%;
+@company_logo:url('images/bg-white-trans-uonlogo.png') no-repeat 89% 3em;
 @slide_color:-webkit-gradient(
     linear,
     left bottom,
@@ -30,6 +30,7 @@ html{
 body{
 	height:100%;
 	background:@company_logo;
+	background-position:fixed;
 	min-height:45em;
 	font-family:@slide_body_font;
 	color:@textColor;
@@ -46,11 +47,12 @@ h3{font-size:@base_font_size*2;}
 h4{font-size:@base_font_size*1.5;}
 
 
-/* List Styles */ 
+/* Section Styles */ 
 #slides {
 	section {
 		img{margin-top:2em;}
-		ul{ padding:1em;
+		ul{ 
+		padding:1em;
 		margin-top:2em;
 		font-size:@base_font_size * 1.5;
 		list-style-type: disc;
@@ -59,6 +61,10 @@ h4{font-size:@base_font_size*1.5;}
 			display:block;
 			
 			}
+		}
+		ol{
+			padding:1em;
+			margin-top:2em;
 		}
 	
 	}
@@ -112,4 +118,9 @@ header{
 			}
 		}
 	}
+	
+	&.hide{
+	display:none;
+	}
+   
 }
