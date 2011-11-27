@@ -19,7 +19,6 @@ Slidestr.prototype.init = function(options)
 	{
 		
 		this.options = $.extend({},this.defaults,options);
-		
 		this.slides = $(this.options.slides);
 		this.slides.hide();
 		this.currentSlide=0;
@@ -50,7 +49,7 @@ Slidestr.prototype.showSlide = function ()
 	if(this.currentSlide >= this.slides.length)
 	{
 		console.log("end of show")
-		$("body").append("<section><h1>The End</h1></section>");
+		$("body").append("<section class='end'><h1>The End</h1></section>");
 		return false;
 	}
 	if(this.options.transition == 'fade')
@@ -64,6 +63,8 @@ Slidestr.prototype.showSlide = function ()
 	{
 		$(this.slides[this.currentSlide]).show();
 	}
+	location.hash = this.currentSlide;
+	history.pushState(null, null, location.href);
 	
 }
 
@@ -108,24 +109,60 @@ Slidestr.prototype.bindNavigation= function()
 		return false;
 	});
 	
-	$(document).keypress(function(event){
-		
-		switch(event.keyCode){
-			case 32:
-			case 13:
-			self.nextSlide();
-			break;
-			case 32:
-		    case 34:
-		    case 39:
-		    case 40:
-			self.previousSlide();
-			default:
-			console.log(event.keyCode);
-			
-		};
+	document.addEventListener('keydown', function(e)
+	        {
+	          switch(e.keyCode)
+	                {
+
+	                        case 37: // left
+	                                self.previousSlide();
+	                                break;
+
+	                        case 38: // up
+	                                self.showAction();
+	                                break;
+
+	                        case 39: // right
+													case 32:
+													
+	                                self.nextSlide();
+	                                break;
+
+	                        case 40: // down
+	                                self.hideAction();
+	                                break;
+	                };
 		
 	});
+	
+	window.addEventListener("popstate", function(e) {
+	    console.log(e);
+			
+	});
+}
+Slidestr.prototype.showAction = function()
+{
+	if($(this.slides[this.currentSlide]).find(".action").length)
+	{
+		$(this.slides[this.currentSlide]).find(".action:first").removeClass("action").addClass("action-shown");
+		
+	}
+	else
+	{
+		this.nextSlide();
+	}
+	
+}
+Slidestr.prototype.hideAction = function()
+{
+	if($(this.slides[this.currentSlide]).find(".action-shown").length)
+	{
+		$(this.slides[this.currentSlide]).find(".action-shown:last").removeClass("action-shown").addClass("action");
+	}
+	else
+	{
+		this.previousSlide();
+	}
 	
 }
 Slidestr.prototype.slides;

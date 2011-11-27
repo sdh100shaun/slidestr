@@ -31,7 +31,7 @@ body{
 	height:100%;
 	background:@company_logo;
 	background-position:fixed;
-	min-height:45em;
+	min-height:5em;
 	font-family:@slide_body_font;
 	color:@textColor;
 }
@@ -59,13 +59,25 @@ h4{font-size:@base_font_size*1.5;}
 		li{
 			padding:0.5em;
 			display:block;
-			
+			/* actions */
+			&.action{display:none;}	
 			}
 		}
 		ol{
 			padding:1em;
 			margin-top:2em;
+			li{
+				padding:0.5em;
+				display:block;
+				/* actions */
+				&.action{display:none;}	
+				
+			}
+			
+			
+		
 		}
+		
 	
 	}
 }
@@ -124,3 +136,9 @@ header{
 	}
    
 }
+/* slide types */ 
+.title-slide{
+	margin-top:10em;
+}
+
+
