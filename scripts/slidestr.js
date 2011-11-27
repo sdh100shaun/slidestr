@@ -48,8 +48,8 @@ Slidestr.prototype.showSlide = function ()
 {
 	if(this.currentSlide >= this.slides.length)
 	{
-		console.log("end of show")
-		$("body").append("<section class='end'><h1>The End</h1></section>");
+		this.currentSlide=0;
+		this.showSlide();
 		return false;
 	}
 	if(this.options.transition == 'fade')
@@ -136,7 +136,7 @@ Slidestr.prototype.bindNavigation= function()
 	});
 	
 	window.addEventListener("popstate", function(e) {
-	    console.log(e);
+	    
 			
 	});
 }
@@ -175,7 +175,7 @@ var slides = {
 	
 	init: function(){
 		
-		slides = new Slidestr();
+		slides = new Slidestr(options={navigationState:'hide'});
 		slides.bindNavigation();
 	}
 	

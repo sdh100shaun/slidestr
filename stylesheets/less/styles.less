@@ -5,7 +5,7 @@
 */
 /* --------------------Configurable settings for reuse -------------------- */ 
 
-@company_logo:url('images/bg-white-trans-uonlogo.png') no-repeat 89% 3em;
+@company_logo:url('images/bg-white-trans-uonlogo.png') no-repeat 89% 2.5em;
 @slide_color:-webkit-gradient(
     linear,
     left bottom,
@@ -17,7 +17,9 @@
 @slide_heading_font:'Rokkitt', serif; //put any webfonts in util.css
 @slide_body_font: Georgia, Serif;
 @pColor:@textColor;
-
+@panelColor:@textColor;
+@panelText:#333;
+@panelFont:@slide_body_font;
 
 
 /* -------------------End of configuarble settings -------------- */
@@ -77,7 +79,21 @@ h4{font-size:@base_font_size*1.5;}
 			
 		
 		}
-		
+		div.panel{
+		margin-top:1em;
+		min-height:10em;
+		padding:0.4em;
+		background:@panelColor;
+		border-radius:15px;
+		color:@panelText;
+		font:@panelFont;
+			p{color:#336699;}
+		}
+		.shadow{
+		-moz-box-shadow: 0 0 5px 5px rgba(0,0,0,0.3);
+		-webkit-box-shadow: 0 0 5px 5px rgba(0,0,0,0.3);
+		box-shadow: 0 0 5px 5px rgba(0,0,0,0.3);
+		}
 	
 	}
 }
@@ -136,6 +152,8 @@ header{
 	}
    
 }
+em{font-style:italic;}
+.action{display:none;}
 /* slide types */ 
 .title-slide{
 	margin-top:10em;

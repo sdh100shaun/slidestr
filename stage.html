@@ -21,8 +21,9 @@
 		<section class="title-slide">
 			<headergroup>
 				<h1>Creating Portlets at Nottingham University.</h1>
+			
+			<h2>Shaun Hare : Web Technologies Team : University of Nottingham</h2>
 			</headergroup>
-			<p>Shaun Hare : Web Technologies Team : University of Nottingham</p>
 		</section>
 		<section>
 			<headergroup>
@@ -30,7 +31,8 @@
 			</headergroup>
 			<ul>
 				<li class="action">Developer / Code Monkey </li>
-				<li class="action">Developer / Code Monkey </li>
+				<li class="action">I like things simple </li>
+				<li class="action">I work in a number of languages and at work on a number of platforms.</li>
 			</ul>
 			
 			
@@ -49,7 +51,7 @@
 			</headergroup>
 			<p>Portal - Luminis 5 / 3</p>
 			
-			<img src="images/portal.png" alt="portal" />
+			<img class="shadow" src="images/portal.png" alt="portal" />
 			
 		</section>
 		<section>
@@ -57,7 +59,7 @@
 			<h1>About</h1>
 			</headergroup>
 			<p>Workspace - Atlassian Confluence</p>
-			<img src="images/workspace.png" alt="workspace">
+			<img class="shadow" src="images/workspace.png" alt="workspace">
 			
 		</section>
 		<section>
@@ -65,16 +67,16 @@
 			<h1>About</h1>
 			</headergroup>
 			<p>Blogs - Wordpress</p>
-		<img src="images/blogs.png" alt="workspace">
+		<img class="shadow" src="images/blogs.png" alt="workspace">
 		</section>
 		<section>
 			<headergroup>
 			<h1>This presentation.</h1>
 			</headergroup>
 				<ul>
-					<li>Workflow we go through</li>
-					<li>Tools we use to create portlets</li>
-					<li>Lessons learnt</li>
+					<li class="action">Workflow we go through</li>
+					<li class="action">Tools we use to create portlets</li>
+					<li class="action">Lessons learnt with Luminis 5</li>
 				</ul>
 		</section>
 		<section>
@@ -82,30 +84,67 @@
 			<h1>Workflow - Important objectives</h1>
 			</headergroup>
 				<ul>
-					<li>Portlet creation - simple</li>
-					<li>Highest possible Code Quality</li>
-					<li>All code in source repository</li>
-					<li>Portlets versioned</li>
+					<li class="action">Portlet creation - simple</li>
+					<li class="action">Highest possible Code Quality</li>
+					<li class="action">All code in source repository</li>
+					<li class="action">Portlets versioned</li>
 				</ul>
 		</section>
 		<section>
 			<headergroup>
 			<h1>Workflow - the process</h1>
 			</headergroup>
-			<p>Canvas or image here</p>
+			<canvas></canvas>
 		</section>
 		<section>
 			<headergroup>
 			<h1>Tools / Techniques.</h1>
 			</headergroup>
 				<ul>
-					<li>Maven</li>
-					<li>Spring MVC</li>
-					<li>Test Driven Development</li>
-					<li>Continuous Integration</li>
+					<li class="action">Maven</li>
+					<li class="action">Spring MVC</li>
+					<li class="action">Test Driven Development</li>
+					<li class="action">Continuous Integration</li>
 
 
 				</ul>
+		</section>
+		<section>
+			<headergroup>
+				<h1>Maven Archetypes</h1>
+			</headergroup>
+			<ul>
+				<li class="action"><em>definition:</em> An archetype is defined as an original pattern or model from which all other things of the same kind are made.</li>
+			</ul>
+			<div class="panel action">
+				<p> mvn archetype:generate -DarchetypeGroupId=uk.ac.nottingham.portal.portlets -DarchetypeArtifactId=luminis-spring-portlet -DarchetypeVersion=${VERSION} -DgroupId=uk.ac.nottingham.portal.portlets  -Dpackage=uk.ac.nottingham.portal.portlets.${PROJECT}  -DartifactId=${PROJECT} -DprojectName=${PROJECT}
+				</p>
+			</panel>
+		</section>
+		<section>
+			<headergroup>
+				<h1>Scripting</h1>
+			</headergroup>
+			<div class="panel action">
+			<ul>
+				<li class="action"><em>$>> create-luminis-spring-portlet -p {name}</li>
+				<li class="action"><em>$>> create-luminis-html-portlet -p {name}
+			</ul>
+			</div>
+		</section>
+		<section>
+			<headergroup>
+				<h1>Spring MVC</h1>
+			</headergroup>
+			<img class="shadow"  >
+		</section>
+		<section>
+			<headergroup>
+				<h1>Test Driven Development</h1>
+			<headergroup>
+		</section>
+		<section class="title-slide">
+			<p><href="https://github.com/sdh100shaun/slidestr">https://github.com/sdh100shaun/slidestr</a></p>
 		</section>
 	</div>
 </body>
