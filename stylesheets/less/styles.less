@@ -37,7 +37,7 @@ body{
 	font-family:@slide_body_font;
 	color:@textColor;
 }
-section{margin:4.5em auto; width:75%;}
+section{margin:4.5em auto; width:75%;clear:both;}
 p{color:@pColor;font-size:@base_font_size * 1.35;}
 
 /* Heading styles */ 
@@ -79,26 +79,69 @@ h4{font-size:@base_font_size*1.5;}
 			
 		
 		}
-		div.panel{
+		div{
 		margin-top:1em;
+		&.panel{
 		min-height:10em;
 		padding:0.4em;
 		background:@panelColor;
-		border-radius:15px;
+		.rounded-corners;
 		color:@panelText;
 		font:@panelFont;
 			p{color:#336699;}
+		 }
 		}
 		.shadow{
 		-moz-box-shadow: 0 0 5px 5px rgba(0,0,0,0.3);
 		-webkit-box-shadow: 0 0 5px 5px rgba(0,0,0,0.3);
-		box-shadow: 0 0 5px 5px rgba(0,0,0,0.3);
+		 box-shadow: 0 0 5px 5px rgba(0,0,0,0.3);
 		}
 	
 	}
 }
 
+#model{
+	.circle(rgba(204,0,104,1),125px);
+	height: 150px;
+	width:150px;
+	float:left;
+	span{
+		position:relative; 
+		top:30%;
+		left:30%;
+		color:#ffcccc;
+	}
+}
 
+#view
+	{
+		.circle();
+		height: 150px;
+		width:150px;
+		float:left;
+		margin-right:-25px;
+		span{
+			position:relative; 
+			top:30%;
+			left:30%;
+			color:#333;
+		}
+	}
+
+#controller
+	{
+		.circle(#333);
+		height: 150px;
+		width:150px;
+		float:left;
+		margin-left:-25px;
+		span{
+			position:relative; 
+			top:30%;
+			left:30%;
+			color:@textColor;
+		}
+	}
 /* Header Navigation styles */
 
 /** Reused css styles **/
@@ -160,3 +203,18 @@ em{font-style:italic;}
 }
 
 
+/* Mixins */ 
+
+.rounded-corners(@radius:15px)
+{
+	border-radius:@radius;
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+
+}
+
+.circle(@color:#fff,@radius:125px)
+{
+	.rounded-corners(@radius);
+ 	background-color:@color;
+}
