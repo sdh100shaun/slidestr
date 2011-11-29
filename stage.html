@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" manifest="slide.appcache">
 <head>
-	<link rel="stylesheet" type="text/css" href="stylesheets/util.css" media="screen, projection" />
+	<link rel="stylesheet" type="text/css" href="stylesheets/util.css" media="screen, projection,print" />
 	<link rel="stylesheet/less" type="text/css" href="stylesheets/less/styles.less" />
 	<script src="scripts/less-1.1.5.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="scripts/jquery-1.7-min.js" type="text/javascript" charset="utf-8"></script>
@@ -95,18 +95,27 @@
 			<headergroup>
 			<h1>Workflow - the process</h1>
 			</headergroup>
-			<canvas></canvas>
+			<div class="action panel">
+			<ul class="layers"><li class="action"><span class="layer">Collaborative Specification and Code Plan</span></li>
+			<li class="action"><span class="layer">Test development</span></li>
+			<li class="action"><span class="layer">Code development</span></li>
+			<li class="action"><span class="layer">Continuous Communication throughout</li>
+			<li class="action"><span class="layer">Code Review</span></li>
+			<li class="action"><span class="layer">Automated Version / Deploy</span></li>
+			</ul>
+			</div>
 		</section>
 		<section>
 			<headergroup>
 			<h1>Tools / Techniques.</h1>
 			</headergroup>
 				<ul>
+					
 					<li class="action">Maven</li>
 					<li class="action">Spring MVC</li>
 					<li class="action">Test Driven Development</li>
 					<li class="action">Continuous Integration</li>
-
+					
 
 				</ul>
 		</section>
@@ -128,8 +137,8 @@
 			</headergroup>
 			<div class="panel action">
 			<ul>
-				<li class="action"><em>$>> create-luminis-spring-portlet -p {name}</li>
-				<li class="action"><em>$>> create-luminis-html-portlet -p {name}
+				<li class="action"><em>$>> create-luminis-spring-portlet -p {name}</em></li>
+				<li class="action"><em>$>> create-luminis-html-portlet -p {name}</em></li>
 			</ul>
 			</div>
 		</section>
@@ -137,19 +146,64 @@
 			<headergroup>
 				<h1>Spring MVC</h1>
 			</headergroup>
-			<div id="model"><span>Model</span></div>
-			<div id="view"><span>View</span></div>
-			<div id="controller"><span>Controller</span></div>
+			<div id="model" class="action"><span>Model</span></div>
+			<div id="view" class="action"><span>View</span></div>
+			<div id="controller" class="action"><span>Controller</span></div>
+			
+			<p class="action clear">Separations of concerns - allows the reuse of domain specific logic</p>
 		</section>
+		<section>
+			<headergroup>
+				<h1>Code Features</h1>
+			<headergroup>
+				<ul>
+					<li class="action"> Logging using Aspect Orientated Programming </li>
+					<li class="action"> Service and Repository objects </li>
+					<li class="action"> Use of Java / Spring Annotations </li>
+					<li class="action"> Front-end code extensive re-use of Javascript (JQuery Plugins)</li>
+					<li class="action"> Design patterns </li>
+				</ul>
+			</section>
 		<section>
 			<headergroup>
 				<h1>Test Driven Development</h1>
 			<headergroup>
-				<ol>
-					<li>All code Unit tested with Junit </li>
-					<li>Test Suite ran as part of code review</li>
-					<li>Integration testing for Webservices and Database calls</li>
-				</ol>
+				<ul>
+					<li class="action">All code Unit tested with JUnit </li>
+					<li class="action">Test Suite ran as part of code review</li>
+					<li class="action" >Integration testing for web services and Database calls</li>
+				</ul>
+		</section>
+			
+		<section>
+			<headergroup>
+				<h1>Continuous Deployment</h1>
+			<headergroup>
+				<ul>
+					<li class="action" >Allows running of test suite </li>
+					<li class="action" >Versioning and automated deploy to build artifact repository</li>
+					<li class="action" >Deploy to servers (there be dragons here ..)</li>
+				</ul>
+		</section>	
+		<section>
+		
+		</section>
+		<section>
+			<headergroup>
+				<h1>Lessons learnt</h1>
+			</headergroup>
+			 <p class="action"> Difficult to automate build plan creation </p>
+			 <p class="action"> Without communication it all fails </p>
+			 <p class="action"> Don't underestimate the difficulty to deploy </p>
+			 
+		</section>
+			<section>
+				<headergroup>
+					<h1>Community initiatives I would like to see.</h1>
+				</headergroup>
+				 <p class="action"> Creation community shared Archetypes </p>
+				 <p class="action"> Utility/Code share -some good stuff happening with Mobile Connection </p>
+				 <p class="action"> Common SaaS software in portlets  </p>
 			</section>
 		<section class="title-slide">
 			<p><href="https://speakerdeck.com/sdh100shaun">Slides at SpeakerDeck</a></p>
@@ -165,6 +219,6 @@ $(document).ready(function(){
 		console.log("slide" + slide +"changed");
 	});
 });
-slides.init();
+//slides.init();
 </script>
 </html>

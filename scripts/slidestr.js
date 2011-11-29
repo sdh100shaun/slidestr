@@ -119,11 +119,12 @@ Slidestr.prototype.bindNavigation= function()
 	                                break;
 
 	                        case 38: // up
+																	case 32:
 	                                self.showAction();
 	                                break;
 
 	                        case 39: // right
-													case 32:
+													case 13:
 													
 	                                self.nextSlide();
 	                                break;

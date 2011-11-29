@@ -37,8 +37,13 @@ body{
 	font-family:@slide_body_font;
 	color:@textColor;
 }
-section{margin:4.5em auto; width:75%;clear:both;}
-p{color:@pColor;font-size:@base_font_size * 1.35;}
+section{
+	margin:4.5em auto; 
+	width:75%;
+	clear:both;
+	page-break-after:always;
+	}
+p{color:@pColor;font-size:@base_font_size * 1.35;line-height:@base_font_size+65%;}
 
 /* Heading styles */ 
 
@@ -101,10 +106,11 @@ h4{font-size:@base_font_size*1.5;}
 }
 
 #model{
-	.circle(rgba(204,0,104,1),125px);
+	.circle(rgba(204,0,104,1),225px);
 	height: 150px;
 	width:150px;
 	float:left;
+	
 	span{
 		position:relative; 
 		top:30%;
@@ -130,7 +136,7 @@ h4{font-size:@base_font_size*1.5;}
 
 #controller
 	{
-		.circle(#333);
+		.circle(#333,85px);
 		height: 150px;
 		width:150px;
 		float:left;
@@ -142,6 +148,10 @@ h4{font-size:@base_font_size*1.5;}
 			color:@textColor;
 		}
 	}
+.right{
+	float:right;
+}
+.clear{clear:both;}
 /* Header Navigation styles */
 
 /** Reused css styles **/
@@ -197,6 +207,7 @@ header{
 }
 em{font-style:italic;}
 .action{display:none;}
+video{width:300px;height:250px;}
 /* slide types */ 
 .title-slide{
 	margin-top:10em;
@@ -213,7 +224,7 @@ em{font-style:italic;}
 
 }
 
-.circle(@color:#fff,@radius:125px)
+.circle(@color:#fff,@radius:225px)
 {
 	.rounded-corners(@radius);
  	background-color:@color;
