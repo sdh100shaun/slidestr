@@ -95,15 +95,51 @@
 			<headergroup>
 			<h1>Workflow - the process</h1>
 			</headergroup>
-			<div class="action panel">
-			<ul class="layers"><li class="action"><span class="layer">Collaborative Specification and Code Plan</span></li>
-			<li class="action"><span class="layer">Test development</span></li>
-			<li class="action"><span class="layer">Code development</span></li>
-			<li class="action"><span class="layer">Continuous Communication throughout</li>
-			<li class="action"><span class="layer">Code Review</span></li>
-			<li class="action"><span class="layer">Automated Version / Deploy</span></li>
-			</ul>
-			</div>
+			<dl>
+				<dt><a href="#Section1">Specification</a></dt>
+				<dd id="Section1">
+					<p>
+						Collaborative Specification, involving all parties, presented at Kick Off meeting
+					</p>
+				</dd>
+				<dt><a href="#Section2">Code Plan</a></dt>
+				<dd id="Section2">
+					<p>
+						Developer focused document to plan out code.</p>
+				</dd>
+				<dt><a href="#Section3">Creating Jira Tasks</a></dt>
+				<dd id="Section3">
+					<p>
+						Creating tasks for the developers.</p>
+				</dd>
+				<dt><a href="#Section4">Unit Test Development</a></dt>
+				<dd id="Section4">
+					<p>
+						Creating tests for the code.</p>
+				</dd>
+				<dt><a href="#Section5">Code Development</a></dt>
+				<dd id="Section5">
+					<p>
+						Iterating between creating tests, and satisfying them withcode.</p>
+				</dd>
+				<dt><a href="#Section6">Continuous Development</a></dt>
+				<dd id="Section6">
+					<p>
+						Goes on throughtout the sprint, automated deploy to dev and test platforms</p>
+				</dd>
+				<dt><a href="#Section7">Code Review</a></dt>
+				<dd id="Section7">
+					<p>
+						All code checked prior to deployment to live</p>
+				</dd>
+				<dt><a href="#Section8">Versioning and Deploy</a></dt>
+				<dd id="Section8">
+					<p>
+						Code is versioned and stored in archiva deployed from there.</p>
+				</dd>
+				
+			</dl>
+			
 		</section>
 		<section>
 			<headergroup>
@@ -217,8 +253,29 @@
 $(document).ready(function(){	
 	$('html').bind('slideChange.slidestr',function(e,slide){
 		console.log("slide" + slide +"changed");
+		switch(slide)
+		{
+			case 8:
+			{
+				var section=1;
+				document.addEventListener('keydown', function(e)
+				        {
+				          switch(e.keyCode)
+				                {
+									case 81:
+										$("a[href='#Section"+section+"']").trigger("click");
+										
+;										section++;
+									default: 
+									console.log(e.keyCode);
+									break;
+								}
+				});
+				break;
+			}
+		}
 	});
 });
-//slides.init();
+slides.init();
 </script>
 </html>
