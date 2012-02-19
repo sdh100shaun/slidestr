@@ -20,20 +20,20 @@
 	<div id="slides">
 		<section class="title-slide">
 			<headergroup>
-				<h1>Creating Portlets at Nottingham University.</h1>
+				<h1>A smaple slide</h1>
 			
-			<h2>Shaun Hare : Web Technologies Team : University of Nottingham</h2>
+			<h2>Second heading</h2>
 			</headergroup>
-			<p>European Luminis User Group - Nottingham University 29th Nov 2011</p>
+			<p>some text</p>
 		</section>
 		<section>
 			<headergroup>
 			<h1>About Me.</h1>
 			</headergroup>
 			<ul>
-				<li class="action">Developer / Code Monkey </li>
-				<li class="action">I like things simple </li>
-				<li class="action">I work in a number of languages and at work on a number of platforms.</li>
+				<li class="action">A point with action </li>
+				<li class="action">A point with action </li>
+				<li class="action">A point with action</li>
 			</ul>
 			
 			
@@ -43,204 +43,10 @@
 			<headergroup>
 			<h1>About</h1>
 			</headergroup>
-			<p>Mobile - Rhomoble (Ruby)</p>
-			<img src="images/mobile.png" alt="mobile"/>
-			</section>
-		<section>
-			<headergroup>
-			<h1>About</h1>
-			</headergroup>
-			<p>Portal - Luminis 5 / 3</p>
-			
-			<img class="shadow" src="images/portal.png" alt="portal" />
-			
-		</section>
-		<section>
-			<headergroup>
-			<h1>About</h1>
-			</headergroup>
-			<p>Workspace - Atlassian Confluence</p>
-			<img class="shadow" src="images/workspace.png" alt="workspace">
-			
-		</section>
-		<section>
-			<headergroup>
-			<h1>About</h1>
-			</headergroup>
-			<p>Blogs - Wordpress</p>
-		<img class="shadow" src="images/blogs.png" alt="workspace">
-		</section>
-		<section>
-			<headergroup>
-			<h1>This presentation.</h1>
-			</headergroup>
-				<ul>
-					<li class="action">Workflow we go through</li>
-					<li class="action">Tools we use to create portlets</li>
-					<li class="action">Lessons learnt with Luminis 5</li>
-				</ul>
-		</section>
-		<section>
-			<headergroup>
-			<h1>Workflow - Important objectives</h1>
-			</headergroup>
-				<ul>
-					<li class="action">Portlet creation - simple</li>
-					<li class="action">Highest possible Code Quality</li>
-					<li class="action">All code in source repository</li>
-					<li class="action">Portlets versioned</li>
-				</ul>
-		</section>
-		<section>
-			<headergroup>
-			<h1>Workflow - the process</h1>
-			</headergroup>
-			<dl>
-				<dt><a href="#Section1">Specification</a></dt>
-				<dd id="Section1">
-					<p>
-						Collaborative Specification, involving all parties, presented at Kick Off meeting
-					</p>
-				</dd>
-				<dt><a href="#Section2">Code Plan</a></dt>
-				<dd id="Section2">
-					<p>
-						Developer focused document to plan out code.</p>
-				</dd>
-				<dt><a href="#Section3">Creating Jira Tasks</a></dt>
-				<dd id="Section3">
-					<p>
-						Creating tasks for the developers.</p>
-				</dd>
-				<dt><a href="#Section4">Unit Test Development</a></dt>
-				<dd id="Section4">
-					<p>
-						Creating tests for the code.</p>
-				</dd>
-				<dt><a href="#Section5">Code Development</a></dt>
-				<dd id="Section5">
-					<p>
-						Iterating between creating tests, and satisfying them withcode.</p>
-				</dd>
-				<dt><a href="#Section6">Continuous Development</a></dt>
-				<dd id="Section6">
-					<p>
-						Goes on throughtout the sprint, automated deploy to dev and test platforms</p>
-				</dd>
-				<dt><a href="#Section7">Code Review</a></dt>
-				<dd id="Section7">
-					<p>
-						All code checked prior to deployment to live</p>
-				</dd>
-				<dt><a href="#Section8">Versioning and Deploy</a></dt>
-				<dd id="Section8">
-					<p>
-						Code is versioned and stored in archiva deployed from there.</p>
-				</dd>
-				
-			</dl>
-			
-		</section>
-		<section>
-			<headergroup>
-			<h1>Tools / Techniques.</h1>
-			</headergroup>
-				<ul>
-					
-					<li class="action">Maven</li>
-					<li class="action">Spring MVC</li>
-					<li class="action">Test Driven Development</li>
-					<li class="action">Continuous Integration</li>
-					
-
-				</ul>
-		</section>
-		<section>
-			<headergroup>
-				<h1>Maven Archetypes</h1>
-			</headergroup>
-			<ul>
-				<li class="action"><em>definition:</em> An archetype is defined as an original pattern or model from which all other things of the same kind are made.</li>
-			</ul>
-			<div class="panel action">
-				<p> mvn archetype:generate -DarchetypeGroupId=uk.ac.nottingham.portal.portlets -DarchetypeArtifactId=luminis-spring-portlet -DarchetypeVersion=${VERSION} -DgroupId=uk.ac.nottingham.portal.portlets  -Dpackage=uk.ac.nottingham.portal.portlets.${PROJECT}  -DartifactId=${PROJECT} -DprojectName=${PROJECT}
-				</p>
-			</panel>
-		</section>
-		<section>
-			<headergroup>
-				<h1>Scripting</h1>
-			</headergroup>
-			<div class="panel action">
-			<ul>
-				<li class="action"><em>$>> create-luminis-spring-portlet -p {name}</em></li>
-				<li class="action"><em>$>> create-luminis-html-portlet -p {name}</em></li>
-			</ul>
-			</div>
-		</section>
-		<section>
-			<headergroup>
-				<h1>Spring MVC</h1>
-			</headergroup>
-			<div id="model" class="action"><span>Model</span></div>
-			<div id="view" class="action"><span>View</span></div>
-			<div id="controller" class="action"><span>Controller</span></div>
-			
-			<p class="action clear">Separations of concerns - allows the reuse of domain specific logic</p>
-		</section>
-		<section>
-			<headergroup>
-				<h1>Code Features</h1>
-			<headergroup>
-				<ul>
-					<li class="action"> Logging using Aspect Orientated Programming </li>
-					<li class="action"> Service and Repository objects </li>
-					<li class="action"> Use of Java / Spring Annotations </li>
-					<li class="action"> Front-end code extensive re-use of Javascript (JQuery Plugins)</li>
-					<li class="action"> Design patterns </li>
-				</ul>
-			</section>
-		<section>
-			<headergroup>
-				<h1>Test Driven Development</h1>
-			<headergroup>
-				<ul>
-					<li class="action">All code Unit tested with JUnit </li>
-					<li class="action">Test Suite ran as part of code review</li>
-					<li class="action" >Integration testing for web services and Database calls</li>
-				</ul>
-		</section>
-			
-		<section>
-			<headergroup>
-				<h1>Continuous Deployment</h1>
-			<headergroup>
-				<ul>
-					<li class="action" >Allows running of test suite </li>
-					<li class="action" >Versioning and automated deploy to build artifact repository</li>
-					<li class="action" >Deploy to servers (there be dragons here ..)</li>
-				</ul>
-		</section>	
-		<section>
+			<p>you can use pretty much any html</p>
 		
-		</section>
-		<section>
-			<headergroup>
-				<h1>Lessons learnt</h1>
-			</headergroup>
-			 <p class="action"> Difficult to automate build plan creation </p>
-			 <p class="action"> Without communication it all fails </p>
-			 <p class="action"> Don't underestimate the difficulty to deploy </p>
-			 
-		</section>
-			<section>
-				<headergroup>
-					<h1>Community initiatives I would like to see.</h1>
-				</headergroup>
-				 <p class="action"> Creation community shared Archetypes </p>
-				 <p class="action"> Utility/Code share -some good stuff happening with Mobile Connection </p>
-				 <p class="action"> Common SaaS software in portlets  </p>
 			</section>
+		
 		<section class="title-slide">
 			<p><href="https://speakerdeck.com/sdh100shaun">Slides at SpeakerDeck</a></p>
 			<p><href="https://github.com/sdh100shaun/slidestr">https://github.com/sdh100shaun/slidestr</a></p>
@@ -252,7 +58,7 @@
  
 $(document).ready(function(){	
 	$('html').bind('slideChange.slidestr',function(e,slide){
-		console.log("slide" + slide +"changed");
+		
 		switch(slide)
 		{
 			case 8:
