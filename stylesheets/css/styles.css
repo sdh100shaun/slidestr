@@ -1,0 +1,214 @@
+/* Slidster less file
+   Author: Shaun Hare : @sdh100shaun
+   License: http://shaun.mit-license.org/
+   Version : 1.0 
+*/
+/* --------------------Configurable settings for reuse -------------------- */
+/* -------------------End of configuarble settings -------------- */
+html {
+  color: #ffffff;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.8, #03152b));
+}
+/* Main body styles */
+body {
+  height: 100%;
+  background: url('images/bg-white-trans-uonlogo.png') no-repeat 89% 2.5em;
+  background-position: fixed;
+  min-height: 5em;
+  font-family: Georgia, Serif;
+  color: #ffffff;
+}
+section {
+  margin: 4.5em auto;
+  width: 75%;
+  clear: both;
+  page-break-after: always;
+}
+p {
+  color: #ffffff;
+  font-size: 135%;
+  line-height: 165%;
+}
+/* Heading styles */
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Rokkitt', serif;
+  color: #ffffff;
+}
+h1 {
+  font-size: 300%;
+}
+h2 {
+  font-size: 250%;
+}
+h3 {
+  font-size: 200%;
+}
+h4 {
+  font-size: 150%;
+}
+/* Section Styles */
+#slides section img {
+  margin-top: 2em;
+}
+#slides section ul {
+  padding: 1em;
+  margin-top: 2em;
+  font-size: 150%;
+  list-style-type: disc;
+}
+#slides section ul li {
+  padding: 0.5em;
+  display: block;
+  /* actions */
+}
+#slides section ul li.action {
+  display: none;
+}
+#slides section ol {
+  padding: 1em;
+  margin-top: 2em;
+}
+#slides section ol li {
+  padding: 0.5em;
+  display: block;
+  /* actions */
+}
+#slides section ol li.action {
+  display: none;
+}
+#slides section div {
+  margin-top: 1em;
+}
+#slides section div.panel {
+  min-height: 10em;
+  padding: 0.4em;
+  background: #ffffff;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  color: #333333;
+  font: Georgia, Serif;
+}
+#slides section div.panel p {
+  color: #336699;
+}
+#slides section .shadow {
+  -moz-box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
+}
+#model {
+  border-radius: 225px;
+  -webkit-border-radius: 225px;
+  -moz-border-radius: 225px;
+  background-color: #cc0068;
+  height: 150px;
+  width: 150px;
+  float: left;
+}
+#model span {
+  position: relative;
+  top: 30%;
+  left: 30%;
+  color: #ffcccc;
+}
+#view {
+  border-radius: 225px;
+  -webkit-border-radius: 225px;
+  -moz-border-radius: 225px;
+  background-color: #ffffff;
+  height: 150px;
+  width: 150px;
+  float: left;
+  margin-right: -25px;
+}
+#view span {
+  position: relative;
+  top: 30%;
+  left: 30%;
+  color: #333;
+}
+#controller {
+  border-radius: 85px;
+  -webkit-border-radius: 85px;
+  -moz-border-radius: 85px;
+  background-color: #333333;
+  height: 150px;
+  width: 150px;
+  float: left;
+  margin-left: -25px;
+}
+#controller span {
+  position: relative;
+  top: 30%;
+  left: 30%;
+  color: #ffffff;
+}
+.right {
+  float: right;
+}
+.clear {
+  clear: both;
+}
+/* Header Navigation styles */
+/** Reused css styles **/
+header {
+  color: #000;
+  background-image: -moz-linear-gradient(top, #c5c5c5, #b0b0b0);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #c5c5c5), color-stop(1, #b0b0b0));
+  background-image: -o-linear-gradient(top, #c5c5c5, #b0b0b0);
+  border-top: 1px solid #dcdcdc;
+  border-bottom: 1px solid #696969;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
+  padding: 1px 10px;
+  overflow: hidden;
+  z-index: 10000;
+  position: relative;
+  height: 2em;
+}
+header nav {
+  display: block;
+  color: #ffffff;
+}
+header nav ul {
+  float: right;
+}
+header nav ul li {
+  float: left;
+  line-height: 2em;
+  display: block;
+  cursor: pointer;
+  margin-top: 4px;
+  width: 50px;
+}
+header nav ul li:first-child a {
+  display: block;
+  text-indent: -9999px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAZCAYAAAAv3j5gAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAkFJREFUeNpi/PTpEwMxIDw8HJkrAcTcQHyXgUjAxEA6EGRhYVmnqKjoQYomoi36//8/COsBmcd+//5tqaKiIgEVIwqzkGCRDxMT09J///7xgfhAy36BDCAWEGVRcHBwAZDqB1oCFwOxkfkUWRQYGAiSnwHEydiCkioW+fv7izMyMq4EGmiPTR4o959ii3x9fY2A8bHu79+/8rg0/vjxgxVoESeR9vxhRM9H3t7e4UDXzgf6BK8hwCT+GeiQL0QlbSamlSg+8vT0rAFSzcRo/vXrFy+Q4iVGrbq6ugPYIjc3N1AunwrE8Qw0AMzMzKwsLi4u+sCgWgwMKl0GGgFQCmUCRryymJiYIixf0Aozb9y4kcnd3d3oyZMnYvfv32clpVghFktISLwGlXVXeXh4vBobG+dFR0d/oYVv/vz5wwhLdV+BOCctLe2+tLR0TU9PD//Pnz8Z8YU70HH/WFlZiYojLi6un4xY6qPAS5cuTa6trZV4+fIlMy7N9fX1Tx0cHN4RmR42MuKo+AyeP38+v7q6WuvKlSts2BSEhIQ0lpWVdRBp0V9cZd0FSUlJjxkzZswCxp3rzp07ObEUQX9MTEx+UKPie8nGxhbS2to6KzMz8xN6BANTEyMpCYJQDfsbiAuSk5MrOjs733Nycv5HsoiBmhbBwHRXV9eI6dOnP5KRkflDS4sYdHV1d+np6fksWLDgDJD9CxhH7KRkWpIaJzo6OldERES8gEn/kKWl5TNSLGIktl2HBhSgleYdYjUABBgAOCl8S+xfAp8AAAAASUVORK5CYII=) no-repeat;
+}
+header nav ul li:nth-child(2) a {
+  display: block;
+  text-indent: -9999px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAZCAYAAAAv3j5gAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAjdJREFUeNpi/PTpEwOxIDw8XBlIfV25cuULBhIBEymKFRUVPVhYWNYBLRSkqUUqKioSv3//tgQyj4WFhenRzCKgJb/+///P8O/fPw1GRsbDoaGhPjSxCGgBHP/584cPSG8ODg4uoLpFUN+g4/7AwMA5QMxCNYuAwfUfi0UgnAx0xB5/f39xXHpZfH19WUE0MRY5ODiwggzGAeyZmJhOAs0L2rx58zkMRwI19wM1hxNjETMzMw8wbngJ+Po70HeJW7duXYkinpqaev7atWsGDNQHtdu3b2+BBx3Qlax///6lgT0MzW5ubipAOnvXrl1fWWApiUYgHhiURi4uLrEssJRDKyApKaloZmamDLaIRkEHSqXfS0tLz/Hw8NxkAaYiRlr4KDY29ktaWtpCILMcVOKzcHFx/eTj4/tHZFnH8OXLF7yZnJ2d/X9JSclHb29vUIrrhSfvly9fNgNpf2IsOnDggFBjY6M0LnlxcfG/zc3NL/T09HKB3PUoJQMnJ2cTkG4lxqLLly9XAIO5Hpucjo7Or9bW1mvAyE8Eci9gFEGgEIFiguDHjx9/sMWnu7v79/r6+t1sbGxpQO5LrGUdiaU3RsLJzs7+lJycPB/ILMXnYFItguc5bm7u/w0NDR9cXV2rgdzphPSSZZGcnNyftra2p8BIBwXVLmL0kmQRMI7YdXV1f02cOPGciIhIKlDoCrF6SbLI0tLymYaGxiGgJWFA7nuSKk1S2nWghhAQ/wHiB6SWFAABBgC+fxD2vIG/7gAAAABJRU5ErkJggg==) no-repeat;
+}
+header.hide {
+  display: none;
+}
+em {
+  font-style: italic;
+}
+.action {
+  display: none;
+}
+video {
+  width: 300px;
+  height: 250px;
+}
+/* slide types */
+.title-slide {
+  margin-top: 10em;
+}
+/* Mixins */
