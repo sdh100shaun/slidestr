@@ -3,7 +3,9 @@ Easily modifiable using less CSS - see configurable settings in less file
 
 Simple add sections to the stage to become slides.
 Features include
-	Configurable colors, backgrounds, logos 
+	Configurable colors, backgrounds, logos
 	Keyboard navigation
-	Top bar navigation. 
-	
+	Top bar navigation.
+
+To install aprropriate modules npm install
+To build run grunt less 

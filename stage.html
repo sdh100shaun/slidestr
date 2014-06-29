@@ -2,11 +2,10 @@
 <html lang="en" manifest="slide.appcache">
 <head>
 	<link rel="stylesheet" type="text/css" href="stylesheets/util.css" media="screen, projection,print" />
-	<link rel="stylesheet/less" type="text/css" href="stylesheets/less/styles.less" />
-	<script src="scripts/less-1.1.5.min.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="stylesheets/css/styles.css" />
 	<script src="scripts/jquery-1.7-min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="scripts/slidestr.js" type="text/javascript" charset="utf-8"></script>
-	
+
+
 </head>
 <body>
 	<header>
@@ -21,7 +20,7 @@
 		<section class="title-slide">
 			<headergroup>
 				<h1>A sample slide</h1>
-			
+
 			<h2>Second heading</h2>
 			</headergroup>
 			<p>some text</p>
@@ -35,30 +34,31 @@
 				<li class="action">A point with action </li>
 				<li class="action">A point with action</li>
 			</ul>
-			
-			
-			
+
+
+
 		</section>
 		<section>
 			<headergroup>
 			<h1>About</h1>
 			</headergroup>
 			<p>you can use pretty much any html</p>
-		
-			</section>
-		
+
+	  </section>
+
 		<section class="title-slide">
 			<p><href="https://speakerdeck.com/sdh100shaun">Slides at SpeakerDeck</a></p>
 			<p><href="https://github.com/sdh100shaun/slidestr">https://github.com/sdh100shaun/slidestr</a></p>
 			<p><href="http://twitter.com/sdh100shaun/slidestr">@sdh100shaun</a></p>
 		</section>
 	</div>
+	<script src="scripts/slidestr.js" type="text/javascript" charset="utf-8"></script>
 </body>
 <script>
- 
-$(document).ready(function(){	
+
+$(document).ready(function(){
 	$('html').bind('slideChange.slidestr',function(e,slide){
-		
+
 		switch(slide)
 		{
 			case 8:
@@ -70,9 +70,9 @@ $(document).ready(function(){
 				                {
 									case 81:
 										$("a[href='#Section"+section+"']").trigger("click");
-										
+
 ;										section++;
-									default: 
+									default:
 									console.log(e.keyCode);
 									break;
 								}
